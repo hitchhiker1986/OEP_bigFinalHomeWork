@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-06-02T16:31:24.662Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0" etag="BotoTRh7qPd7kIWAxYe3" version="21.3.6" type="github">
+<mxfile host="app.diagrams.net" modified="2023-06-04T01:35:55.924Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0" etag="PLKbv3d7Wf-NRf159D8S" version="21.3.6" type="github">
   <diagram name="Page-1" id="c4acf3e9-155e-7222-9cf6-157b1a14988f">
-    <mxGraphModel dx="2350" dy="797" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1180" dy="178" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -22,7 +22,7 @@
         <mxCell id="Fub8hcJ4NYJPcRC2N2-U-10" value="+discountCalc(double Price, Sring discount) : int {override}" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="Fub8hcJ4NYJPcRC2N2-U-9" vertex="1">
           <mxGeometry y="30" width="180" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Fub8hcJ4NYJPcRC2N2-U-13" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=0.361;entryY=1.081;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="mv2xZKtYBl5VgR-Bn2mG-12" edge="1">
+        <mxCell id="Fub8hcJ4NYJPcRC2N2-U-13" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=0.363;entryY=1.014;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.162;exitY=1.029;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" target="mv2xZKtYBl5VgR-Bn2mG-12" edge="1" source="mv2xZKtYBl5VgR-Bn2mG-65">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="450" y="600" as="sourcePoint" />
             <mxPoint x="449.46000000000004" y="445.01" as="targetPoint" />
@@ -199,19 +199,13 @@
         <mxCell id="mv2xZKtYBl5VgR-Bn2mG-47" value="public void Reserve(show s) &lt;br&gt;{&lt;br&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;int j = 1;&lt;br&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;Hashtable freeSeates = new Hashtable();&lt;br&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;for (int i = 0; i &amp;lt; show.r.Seates.length(); i++) &lt;br&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;{&lt;br&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; if (show.r.seates[i].isFree)&lt;br&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; {&lt;br&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; freeSeates.add(j, show.r.Seates[i]);&lt;br&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; j++;&lt;br&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;br&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;IDictionaryEnumerator enumerator = freeSeates.GetEnumerator();&lt;br&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;if(freeSeates.length() &amp;gt; 0)&lt;br&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;{&lt;br&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; Console.WriteLine(&quot;Following seats are free:&quot;);&lt;br&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; while (enumerator.MoveNext())&lt;br&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; {&lt;br&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; Console.WriteLine(enumerator.Key.ToString() + &quot; - &quot; + enumerator.Value.ToString());&lt;br&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;Console.WriteLine(&quot;Please Choose a seat!&quot;);&lt;br&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;int selection = Console.Read();&lt;br&gt;&lt;div&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; Seate seat = freeSeates[selection];&lt;/div&gt;&lt;div&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; show.r.Seates[seat].isFree = False;&lt;br&gt;&lt;/div&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; reservedTickets.add(new Ticket(s, this.getDiscount(), seat));&lt;br&gt;}" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="-9" y="1061" width="580" height="410" as="geometry" />
         </mxCell>
-        <mxCell id="mv2xZKtYBl5VgR-Bn2mG-48" value="" style="endArrow=none;html=1;rounded=0;entryX=0.475;entryY=1.043;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.633;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="mv2xZKtYBl5VgR-Bn2mG-49" target="mv2xZKtYBl5VgR-Bn2mG-16" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="740" y="310" as="sourcePoint" />
-            <mxPoint x="370" y="400" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="mv2xZKtYBl5VgR-Bn2mG-49" value="*" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="735" y="298" width="30" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="mv2xZKtYBl5VgR-Bn2mG-50" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="mv2xZKtYBl5VgR-Bn2mG-12" edge="1">
+        <mxCell id="mv2xZKtYBl5VgR-Bn2mG-50" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;" parent="1" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="200" y="410" as="sourcePoint" />
-            <mxPoint x="360" y="410" as="targetPoint" />
+            <mxPoint x="330" y="410" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="mv2xZKtYBl5VgR-Bn2mG-51" value="-Seates" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
@@ -242,17 +236,17 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="mv2xZKtYBl5VgR-Bn2mG-64" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+        <mxCell id="mv2xZKtYBl5VgR-Bn2mG-64" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=0;" parent="1" vertex="1">
           <mxGeometry x="105" y="580" width="30" height="30" as="geometry" />
         </mxCell>
         <mxCell id="mv2xZKtYBl5VgR-Bn2mG-65" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="445" y="578" width="30" height="30" as="geometry" />
         </mxCell>
         <mxCell id="mv2xZKtYBl5VgR-Bn2mG-66" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="755" y="578" width="30" height="30" as="geometry" />
+          <mxGeometry x="755" y="580" width="30" height="30" as="geometry" />
         </mxCell>
         <mxCell id="mv2xZKtYBl5VgR-Bn2mG-67" value="public Room(uint rows, uint seatesPerRow)&lt;br&gt;{&lt;br&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;public List&amp;lt;Seate&amp;gt; seates= new List&amp;lt;Seate&amp;gt;();&lt;br&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;for (int i = 0; i &amp;lt; rows; i++)&lt;br&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;{&lt;br&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; char r = char(65 + i);&lt;br&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; for (int j = 1; j &amp;lt;= seatesPerRow; j++)&lt;br&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; {&lt;br&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp; seates.add(new Seate(r, j));&lt;br&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;}&lt;br&gt;}" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="880" y="440" width="330" height="190" as="geometry" />
+          <mxGeometry x="1170" y="420" width="330" height="190" as="geometry" />
         </mxCell>
         <mxCell id="mv2xZKtYBl5VgR-Bn2mG-69" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="mv2xZKtYBl5VgR-Bn2mG-68" target="mv2xZKtYBl5VgR-Bn2mG-28" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -261,7 +255,7 @@
           <mxGeometry x="-180" y="418" width="180" height="120" as="geometry" />
         </mxCell>
         <mxCell id="mv2xZKtYBl5VgR-Bn2mG-70" value="public Ticket(Show show, String discount, Seat seat )&lt;br&gt;{&lt;br&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;show = show;&lt;br&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;seat = seat;&lt;br&gt;&amp;nbsp;&amp;nbsp; &amp;nbsp;price = show.getRoom().discountCalc(show.getPrice(), visitor.getDiscount());&lt;br&gt;}" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;whiteSpace=wrap;" parent="1" vertex="1">
-          <mxGeometry x="880" y="280" width="310" height="140" as="geometry" />
+          <mxGeometry x="1170" y="270" width="310" height="140" as="geometry" />
         </mxCell>
         <mxCell id="mv2xZKtYBl5VgR-Bn2mG-71" value="&lt;div&gt;public string getDiscount()&lt;/div&gt;&lt;div&gt;{&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt; &lt;/span&gt;return this.discount;&lt;br&gt;&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="870" y="20" width="180" height="80" as="geometry" />
@@ -269,7 +263,7 @@
         <mxCell id="mv2xZKtYBl5VgR-Bn2mG-72" value="public Visitor(string dsc)&#xa;    {&#xa;        discount = dsc;&#xa;        reservedTickets = new List&lt;Ticket&gt;();&#xa;        boughtTickets = new List&lt;Ticket&gt;();&#xa;    }" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="1070" y="30" width="230" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="gOYIMBs8qbMlLiHDaBJU-2" value="name" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;entryX=0.194;entryY=0.014;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="mv2xZKtYBl5VgR-Bn2mG-19" edge="1">
+        <mxCell id="gOYIMBs8qbMlLiHDaBJU-2" value="" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;entryX=0.194;entryY=0.014;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="mv2xZKtYBl5VgR-Bn2mG-19" edge="1">
           <mxGeometry x="-1" relative="1" as="geometry">
             <mxPoint x="500" y="229" as="sourcePoint" />
             <mxPoint x="700" y="230" as="targetPoint" />
@@ -303,6 +297,16 @@
         </mxCell>
         <mxCell id="gOYIMBs8qbMlLiHDaBJU-9" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" parent="gOYIMBs8qbMlLiHDaBJU-8" connectable="0" vertex="1">
           <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gljIpz4kgczkVQyp67Br-1" value="" style="endArrow=block;endFill=1;html=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=top;rounded=0;exitX=0.465;exitY=1.004;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="mv2xZKtYBl5VgR-Bn2mG-16">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="735" y="215" as="sourcePoint" />
+            <mxPoint x="735" y="320" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="734" y="264" />
+              <mxPoint x="735" y="264" />
+            </Array>
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
